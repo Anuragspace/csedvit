@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for centering the image */
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain; /* Maintain aspect ratio while fitting */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* Default background image for larger screens */
+body {
+    background-color: white;
+    background-size: cover; /* Adjust background image to cover the entire container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents repeating the background image */
+}
+
+/* Mobile view: hide image and set mobile background */
+@media screen and (max-width: 480px) {
+    .image {
+        display: none; /* Hide the image */
+    }
+    
+    body {
+        background-image: url('mobile.jpg'); /* Background image for mobile view */
+    }
+}
+
+/* Ensure the image is visible and default background for tablets and larger screens */
+@media screen and (min-width: 481px) {
+    .image {
+        display: flex; /* Ensure the image is visible */
+    }
+    
+    body {
+        background-image: url('soon.png');
+    }
+}
